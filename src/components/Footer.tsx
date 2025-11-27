@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { FaSquareThreads } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -117,7 +118,7 @@ const Footer: React.FC = () => {
             <ul className="flex space-x-4">
               <li>
                 <a
-                  href="https://www.facebook.com/cybercircusofficial"
+                  href="https://www.facebook.com/cybercircusconnet"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +136,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://github.com/cybercircusofficail"
+                  href="https://github.com/cybercircusconnects"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -153,7 +154,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/cybercircusofficial"
+                  href="https://www.instagram.com/cybercircus.connect"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -207,7 +208,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://www.youtube.com/@cybercircusofficial"
+                  href="https://www.youtube.com/@cybercircus.connect"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -225,6 +226,15 @@ const Footer: React.FC = () => {
                       d="M9.75 15.568V8.432L15.75 12l-6 3.568z"
                     />
                   </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.threads.com/@cybercircus.connect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSquareThreads size={32} />
                 </a>
               </li>
             </ul>

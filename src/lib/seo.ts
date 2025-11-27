@@ -43,10 +43,11 @@ export const siteConfig = {
     }
   },
   social: {
-    facebook: "https://www.facebook.com/cybercircusofficial",
-    instagram: "https://www.instagram.com/cybercircusofficial",
-    youtube: "https://www.youtube.com/@cybercircusofficial",
-    github: "https://github.com/cybercircusofficail"
+    facebook: "https://www.facebook.com/cybercircusconnet",
+    instagram: "https://www.instagram.com/cybercircus.connect",
+    youtube: "https://www.youtube.com/@cybercircus.connect",
+    threads: "https://www.threads.com/@cybercircus.connect",
+    github: "https://github.com/cybercircusconnects"
   }
 };
 
