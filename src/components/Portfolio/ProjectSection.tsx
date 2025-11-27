@@ -38,7 +38,7 @@ const projects: Project[] = [
     image: "/capitalgemologicallab.PNG",
     category: "web",
     technologies: ["Next.js", "Node.js", "AWS", "MongoDB", "Figma"],
-    demoLink: "https://capitalgemologicallab.com",
+    demoLink: "https://stones-project-frontend.vercel.app/",
     featured: true,
   },
   {
@@ -62,6 +62,17 @@ const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
     demoLink: "https://gitcross.com",
     featured: false,
+  },
+  {
+    id: 4,
+    title: "Karepilot",
+    description:
+      "A comprehensive organization and venue management platform designed to streamline operations across multiple locations. Features include organization management, venue templates, map management, asset tracking, alerts & geofencing, and analytics. The system enables users to manage multiple venues across different organization types with real-time status tracking, contact management, and timezone support.",
+    image: "/karepilot.png",
+    category: "web",
+    technologies: ["Next.js", "Node.js", "Express.js", "TypeScript", "MongoDB", "Shadcn", "Redux Toolkit Query", "Tailwind CSS", "Flutter", "Figma"],
+    demoLink: "https://karepilot-frontend.vercel.app/organizations/list",
+    featured: true,
   },
 ];
 
