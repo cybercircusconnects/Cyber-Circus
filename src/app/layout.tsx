@@ -32,6 +32,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
+        <meta name="language" content="en" />
+        <meta name="geo.region" content="PK-PB" />
+        <meta name="geo.placename" content="Lahore" />
+        <meta name="geo.position" content="31.4697;74.2728" />
+        <meta name="ICBM" content="31.4697, 74.2728" />
+        <meta name="author" content="Cyber Circus - Software Development Company" />
       </head>
       <body
         className={`${inter.variable} min-h-screen flex flex-col antialiased bg-white dark:bg-gray-950`}

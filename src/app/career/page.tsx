@@ -5,22 +5,23 @@ import { buildCanonicalUrl, createMetadata } from "@/lib/seo";
 import type { Position } from "@/types/career";
 
 const pageUrl = buildCanonicalUrl("/career");
-const pageTitle = "Careers at Cyber Circus | Join Our Engineering Team";
+const pageTitle = "Careers at Cyber Circus | Software Development Jobs Lahore, Pakistan";
 const pageDescription =
-  "Join a team that builds software that matters. At Cyber Circus, you'll work on challenging projects, use modern tech stacks, and help businesses transform their operations. See our open roles.";
+  "Join a software development team that builds software that matters. At Cyber Circus in Lahore, Pakistan, you'll work on challenging projects, use modern tech stacks, and help businesses transform their operations. See our open engineering roles.";
 
 export const metadata = createMetadata({
   title: pageTitle,
   description: pageDescription,
   keywords: [
     "cyber circus careers",
-    "software engineering jobs",
-    "enterprise software developer jobs",
-    "technology careers",
-    "software development careers",
-    "engineering opportunities",
-    "developer jobs",
-    "IT jobs"
+    "cyber circus jobs lahore",
+    "software engineering jobs pakistan",
+    "enterprise software developer jobs lahore",
+    "technology careers pakistan",
+    "software development careers lahore",
+    "engineering opportunities pakistan",
+    "developer jobs lahore",
+    "IT jobs pakistan"
   ],
   openGraph: {
     title: pageTitle,

@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 
-# Block access to admin or private areas if needed
-# Disallow: /admin/
+# Disallow unnecessary paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
 
+# Sitemap
 Sitemap: https://cybercircusconnect.com/sitemap.xml

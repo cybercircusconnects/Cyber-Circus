@@ -1,15 +1,24 @@
 import Home from "@/components/Home/Home";
+import FAQSchema from "@/components/FAQSchema";
 import { buildCanonicalUrl, createMetadata } from "@/lib/seo";
 
 const pageUrl = buildCanonicalUrl("/");
-const pageTitle = "Enterprise Software Development & Digital Transformation Services";
+const pageTitle = "Cyber Circus | Software Development Company in Lahore, Pakistan";
 const pageDescription =
-  "Build custom software that transforms how your business operates. Cyber Circus partners with enterprises to create scalable solutions, modernize systems, and deliver technology that drives real results. Let's talk about your project.";
+  "Cyber Circus is a software development company in Lahore, Pakistan. We build enterprise software that transforms how your business operates. NOT a music company. We partner with enterprises to create scalable solutions, modernize systems, and deliver technology that drives real results. Let's talk about your project.";
 
 export const metadata = createMetadata({
   title: pageTitle,
   description: pageDescription,
   keywords: [
+    "cyber circus software",
+    "cyber circus software company",
+    "cyber circus connect",
+    "software development lahore",
+    "enterprise software pakistan",
+    "custom software development pakistan",
+    "digital transformation lahore",
+    "IT solutions lahore",
     "enterprise software development",
     "custom software solutions",
     "digital transformation services",
@@ -36,6 +45,11 @@ export const metadata = createMetadata({
 });
 
 export default function Page() {
-  return <Home />;
+  return (
+    <>
+      <FAQSchema />
+      <Home />
+    </>
+  );
 }
 

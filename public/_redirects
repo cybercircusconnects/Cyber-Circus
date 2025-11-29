@@ -1,0 +1,10 @@
+# Redirect HTTP to HTTPS (handled by hosting provider)
+# Redirect www to non-www or vice versa (configure based on preference)
+# Example redirects (uncomment and modify as needed):
+
+# Redirect old URLs to new ones (301 permanent redirects)
+# /old-page /new-page 301
+
+# Redirect trailing slash inconsistencies
+# /* /:splat 301
+

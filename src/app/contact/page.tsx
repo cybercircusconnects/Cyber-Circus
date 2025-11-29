@@ -5,22 +5,23 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { buildCanonicalUrl, createMetadata } from "@/lib/seo";
 
 const pageUrl = buildCanonicalUrl("/contact");
-const pageTitle = "Contact Cyber Circus | Enterprise Software Development Partner";
+const pageTitle = "Contact Cyber Circus | Software Development Company Lahore, Pakistan";
 const pageDescription =
-  "Ready to start your next project? Get in touch with Cyber Circus to discuss your software needs. We'll help you understand your options and create a plan that fits your goals and budget.";
+  "Ready to start your next project? Get in touch with Cyber Circus software development company in Lahore, Pakistan. We'll help you understand your options and create a plan that fits your goals and budget. Contact us at info@cybercircusconnect.com or +92-302-9825213.";
 
 export const metadata = createMetadata({
   title: pageTitle,
   description: pageDescription,
   keywords: [
     "contact cyber circus",
-    "software development services",
-    "enterprise software consulting",
-    "digital transformation consulting",
-    "technology consulting",
+    "cyber circus contact lahore",
+    "software development services pakistan",
+    "enterprise software consulting lahore",
+    "digital transformation consulting pakistan",
+    "technology consulting lahore",
     "schedule consultation",
-    "software development contact",
-    "IT consulting contact"
+    "software development contact pakistan",
+    "IT consulting contact lahore"
   ],
   openGraph: {
     title: pageTitle,

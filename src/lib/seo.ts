@@ -8,8 +8,16 @@ export const siteConfig = {
   legalName: "Cyber Circus",
   tagline: "Enterprise Software Development & Digital Transformation",
   description:
-    "Cyber Circus builds enterprise software that solves real business challenges. We partner with companies to create custom solutions, modernize legacy systems, and drive digital transformation that delivers measurable results.",
+    "Cyber Circus is a software development company in Lahore, Pakistan. We build enterprise software that solves real business challenges. We partner with companies to create custom solutions, modernize legacy systems, and drive digital transformation that delivers measurable results. NOT a music or entertainment company.",
   keywords: [
+    "cyber circus software",
+    "cyber circus software company",
+    "cyber circus connect",
+    "software development lahore",
+    "enterprise software pakistan",
+    "custom software development pakistan",
+    "digital transformation lahore",
+    "IT solutions lahore",
     "enterprise software development",
     "custom software solutions",
     "digital transformation",
@@ -31,7 +39,7 @@ export const siteConfig = {
     "analytics solutions"
   ],
   contact: {
-    email: "info@cybercircus.com",
+    email: "info@cybercircusconnect.com",
     phone: "+92-348-9745648",
     salesPhone: "+92-302-9825213",
     address: {
@@ -47,7 +55,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/cybercircus.connect",
     youtube: "https://www.youtube.com/@cybercircus.connect",
     threads: "https://www.threads.com/@cybercircus.connect",
-    github: "https://github.com/cybercircusconnects"
+    github: "https://github.com/cybercircusconnects",
+    linkedin: "https://www.linkedin.com/company/cybercircusconnect"
   }
 };
 
@@ -79,8 +88,8 @@ const sharedTwitter = {
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.name}`
+    default: `${siteConfig.name} | Software Development Company | ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.name} - Software Development Company`
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -115,12 +124,22 @@ export const baseMetadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   alternates: {
-    canonical: siteUrl
+    canonical: siteUrl,
+    languages: {
+      "en": siteUrl,
+      "en-US": siteUrl
+    }
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "your-google-verification-code"
   },
-  category: "technology"
+  category: "technology",
+  other: {
+    "geo.region": "PK-PB",
+    "geo.placename": "Lahore",
+    "geo.position": "31.4697;74.2728",
+    "ICBM": "31.4697, 74.2728"
+  }
 };
 
 type MetadataOverrides = Partial<Metadata> & {
@@ -176,12 +195,14 @@ export type JsonLd = Record<string, unknown>;
 
 export const getOrganizationSchema = (): JsonLd => ({
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "SoftwareCompany"],
   name: siteConfig.name,
+  alternateName: "Cyber Circus Connect",
   url: siteUrl,
   legalName: siteConfig.legalName,
   logo: `${siteUrl}/transparnt-logo.png`,
   description: siteConfig.description,
+  foundingDate: "2020",
   address: {
     "@type": "PostalAddress",
     streetAddress: siteConfig.contact.address.street,
@@ -203,12 +224,78 @@ export const getOrganizationSchema = (): JsonLd => ({
       "@type": "ContactPoint",
       telephone: siteConfig.contact.salesPhone,
       contactType: "sales",
-      email: "sales@cybercircus.com",
+      email: siteConfig.contact.email,
       areaServed: "Worldwide",
       availableLanguage: ["English"]
     }
   ],
-  sameAs: Object.values(siteConfig.social)
+  sameAs: Object.values(siteConfig.social),
+  knowsAbout: [
+    "Software Development",
+    "Enterprise Software",
+    "Digital Transformation",
+    "Cloud Architecture",
+    "Web Development",
+    "Mobile App Development"
+  ]
+});
+
+export const getLocalBusinessSchema = (): JsonLd => ({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${siteUrl}#business`,
+  name: siteConfig.name,
+  image: `${siteUrl}/transparnt-logo.png`,
+  description: siteConfig.description,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: siteConfig.contact.address.street,
+    addressLocality: siteConfig.contact.address.city,
+    addressRegion: siteConfig.contact.address.region,
+    postalCode: siteConfig.contact.address.postalCode,
+    addressCountry: siteConfig.contact.address.country
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "31.4697",
+    longitude: "74.2728"
+  },
+  telephone: siteConfig.contact.phone,
+  email: siteConfig.contact.email,
+  url: siteUrl,
+  priceRange: "$$",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    opens: "09:00",
+    closes: "18:00"
+  }
+});
+
+export const getWebSiteSchema = (): JsonLd => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteUrl}#website`,
+  url: siteUrl,
+  name: siteConfig.name,
+  description: siteConfig.description,
+  publisher: {
+    "@id": `${siteUrl}#organization`
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${siteUrl}/search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
 });
 
 export const getServiceSchema = (): JsonLd => ({

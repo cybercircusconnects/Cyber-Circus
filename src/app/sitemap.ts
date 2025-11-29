@@ -1,27 +1,50 @@
 import type { MetadataRoute } from "next";
-import { buildCanonicalUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
-export const revalidate = 3600;
 
-const routes = [
-  { path: "/", priority: 1.0, changeFrequency: "weekly" as const },
-  { path: "/services", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/about", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/portfolio", priority: 0.8, changeFrequency: "weekly" as const },
-  { path: "/contact", priority: 0.7, changeFrequency: "monthly" as const },
-  { path: "/career", priority: 0.7, changeFrequency: "weekly" as const }
-] as const;
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = 'https://cybercircusconnect.com'
+  const currentDate = new Date().toISOString()
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseDate = new Date();
-  const lastModified = baseDate.toISOString();
+  const routes = [
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'daily', 
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9, 
+    },
+    {
+      url: `${baseUrl}/portfolio`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/career`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+  ]
 
-  return routes.map((route) => ({
-    url: buildCanonicalUrl(route.path),
-    lastModified,
-    changeFrequency: route.changeFrequency,
-    priority: route.priority
-  }));
+ 
+  return routes as MetadataRoute.Sitemap
 }
-
